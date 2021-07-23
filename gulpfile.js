@@ -51,7 +51,7 @@ const watchFiles = () =>
       baseDir: "./docs",
     },
     // open: "external",
-    // host: "192.168.0.22",
+    // host: "192.168.0.17",
   });
 watch("./src/sass/**/*.scss", CSS);
 watch("./src/images/**/*.+(jpg|jpeg|png|gif)", image);

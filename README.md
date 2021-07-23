@@ -1,4 +1,4 @@
-This project was developed using [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/introduction/), [Sass](https://sass-lang.com/), [Gulp 4](https://gulpjs.com/), [EJS](https://ejs.co/), and [BrowserSync](https://browsersync.io/).
+This project was developed using [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/), [Sass](https://sass-lang.com/), [Gulp 4](https://gulpjs.com/), [EJS](https://ejs.co/), and [BrowserSync](https://browsersync.io/).
 
 ## Available Scripts
 

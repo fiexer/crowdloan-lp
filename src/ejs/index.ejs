@@ -1,12 +1,11 @@
 <!doctype html>
 <html lang="en">
 
-<% const title="Astar Network" %>
-  <% const tagline="Multi Chain dApps Hub on Polkadot" %>
-    <% const url="https://www.plasmnet.io" %>
-      <% const
-        description="Astar Network is a multi chain and a multi virtual machine dApps platform powered by Polkadot." %>
-        <% const image="https://www.plasmnet.io/images/card-image.jpg" %>
+<% const title="Astar Network Crowdloan" %>
+  <% const tagline="Stake DOT and Get ASTA Today!" %>
+    <% const url="https://crowdloan.astar.network" %>
+      <% const description="Support the Astar Network (Previously Plasm) Parachain Auction" %>
+        <% const image="https://crowdloan.astar.network/images/card-image.jpg" %>
 
           <head>
             <!-- Required meta tags -->
@@ -14,8 +13,15 @@
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <meta name="robots" content="index, follow">
 
+            <!-- Google Fonts -->
+            <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" class="webfont">
+
             <!-- Bootstrapped CSS -->
             <link href="css/style.css" rel="stylesheet">
+
+            <!-- Preload images -->
+            <link rel="preload" as="image" href="images/hero-image.webp" />
+            <link rel="preload" as="image" href="images/hero-image.jpg" />
 
             <title>
               <%= title %> - <%= tagline %>
@@ -33,12 +39,12 @@
 
             <!-- Twitter Cards -->
             <meta name="twitter:card" content="summary_large_image">
-            <meta name="twitter:site" content="@Plasm_Network">
+            <meta name="twitter:site" content="@AstarNetwork">
             <meta name="twitter:title" content="<%= title %> - <%= tagline %>">
             <meta name="twitter:description" content="<%= description %>">
             <meta name="twitter:image" content="<%= image %>">
             <meta property="twitter:url" content="<%= url %>" />
-            <meta name="twitter:creator" content="@Plasm_Network">
+            <meta name="twitter:creator" content="@AstarNetwork">
 
             <!-- Favicon -->
             <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
@@ -60,7 +66,8 @@
                   <div class="d-flex align-items-center">
                     <div class="brand-logo__container">
                       <span class="brand-logo d-block">
-                        <img src="images/brand-logo-mark.png" alt="Astar Network" class="brand-logo__mark">
+                        <img src="images/brand-logo-mark.png" alt="Astar Network" class="brand-logo__mark"
+                          loading="lazy">
                         <svg class="brand-logo__type">
                           <use xlink:href="#brand-logo-type"></use>
                         </svg>
@@ -72,12 +79,9 @@
                   </div>
 
                   <ul class="nav d-none d-lg-flex">
-                    <li class="nav-item"><a href="https://shiden.plasmnet.io/" class="nav-link">Shiden Network</a></li>
-                    <li class="nav-item"><a href="https://docs.plasmnet.io/" target="_blank" rel="noopener noreferrer"
-                        class="nav-link">Docs</a>
-                    </li>
-                    <li class="nav-item"><a href="https://forum.plasmnet.io/" target="_blank" rel="noopener noreferrer"
-                        class="nav-link">Governance</a>
+                    <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="#" target="_blank" rel="noopener noreferrer"
+                        class="nav-link">Forum</a>
                     </li>
                     <li class="nav-item">
                       <div class="dropdown nav-link">
@@ -86,7 +90,7 @@
                           Community
                         </a>
                         <ul class="dropdown-menu m-0" aria-labelledby="dropdownMenuLink">
-                          <li><a class="dropdown-item" href="https://twitter.com/Plasm_Network" target="_blank"
+                          <li><a class="dropdown-item" href="https://twitter.com/AstarNetwork" target="_blank"
                               rel="noopener noreferrer">Twitter</a></li>
                           <li><a class="dropdown-item" href="https://discord.gg/Z3nC9U4" target="_blank"
                               rel="noopener noreferrer">Discord</a>
@@ -103,442 +107,346 @@
                         </ul>
                       </div>
                     </li>
-                    <li class="nav-item">
-                      <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.dusty.plasmnet.io%2F#/explorer"
-                        target="_blank" rel="noopener noreferrer" class="btn btn-gradiant">
-                        Go to App
-                        <svg class="icon">
-                          <use xlink:href="#icon-arrow-top-right"></use>
-                        </svg>
-                      </a>
-                    </li>
                   </ul>
 
-                  <div class="d-lg-none mr-1">
+                  <div class="d-lg-none me-1">
                     <button class="hamburger-button">
                       <span>Nav Button</span>
                     </button>
-                    <div class="nav-mobile">
-                      <div class="nav-mobile__inner d-flex align-items-center justify-content-center">
-                        <ul>
-                          <li class="nav-item"><a href="https://shiden.plasmnet.io/" class="nav-link">Shiden Network</a>
-                          </li>
-                          <li class="nav-item"><a href="https://docs.plasmnet.io/" target="_blank"
-                              rel="noopener noreferrer" class="nav-link">Docs</a>
-                          </li>
-                          <li class="nav-item"><a href="https://forum.plasmnet.io/" target="_blank"
-                              rel="noopener noreferrer" class="nav-link">Governance</a>
-                          </li>
-                          <li class="nav-item">
-                            <p class="nav-link m-0">Community</p>
-                            <ul class="ml-3 mb-4 community">
-                              <li class="nav-item"><a href="https://twitter.com/Plasm_Network" target="_blank"
-                                  rel="noopener noreferrer" class="nav-link">Twitter</a></li>
-                              <li class="nav-item"><a href="https://discord.gg/Z3nC9U4" target="_blank"
-                                  rel="noopener noreferrer" class="nav-link">Discord</a>
-                              </li>
-                              <li class="nav-item"><a href="https://t.me/PlasmOfficial" target="_blank"
-                                  rel="noopener noreferrer" class="nav-link">Telegram</a></li>
-                              <li class="nav-item"><a href="https://medium.com/plasm-network" target="_blank"
-                                  rel="noopener noreferrer" class="nav-link">Medium</a>
-                              </li>
-                              <li class="nav-item"><a
-                                  href="https://github.com/PlasmNetwork/plasmdocs/blob/master/wp/en.pdf" target="_blank"
-                                  rel="noopener noreferrer" class="nav-link">Whitepaper</a>
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="nav-item">
-                            <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.dusty.plasmnet.io%2F#/explorer"
-                              target="_blank" rel="noopener noreferrer" class="btn btn-lg btn-light px-5">
-                              Go to App
-                              <svg class="icon">
-                                <use xlink:href="#icon-arrow-top-right"></use>
-                              </svg>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
                   </div>
 
                 </div>
               </header>
 
-              <section id="hero" class="d-flex align-items-center">
-                <div class="container">
-                  <div class="hero-inner text-center w-100">
-                    <h1>Multi Chain dApps <br class="d-none d-sm-block">Hub on Polkadot</h1>
-                    <p class="my-4 my-md-5">Astar Network is a multi chain and a multi virtual machine dApps platform
-                      powered by Polkadot.
-                    </p>
-                    <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.dusty.plasmnet.io%2F#/explorer"
-                      target="_blank" rel="noopener noreferrer" class="btn btn-gradiant btn-lg">
-                      Use App
-                      <svg class="icon">
-                        <use xlink:href="#icon-arrow-top-right"></use>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </section>
-
-              <div id="support" class="d-flex align-items-center">
-                <div class="container d-lg-flex justify-content-center align-items-center">
-                  <div class="support-info mb-5 mb-lg-0">
-                    <h2 class="mb-3">Building the premier multi chain smart contract hub supporting:</h2>
-                    <ul class="d-flex justify-content-center">
-                      <li><span>DeFi</span></li>
-                      <li><span>NFTs</span></li>
-                      <li><span>DAO</span></li>
-                    </ul>
-                    <div class="support-btn mt-4 text-center text-lg-left">
-                      <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.dusty.plasmnet.io%2F#/explorer"
-                        target="_blank" rel="noopener noreferrer" class="btn btn-gradiant btn-lg mr-2">
-                        Go to App
-                        <svg class="icon">
-                          <use xlink:href="#icon-arrow-top-right"></use>
-                        </svg>
-                      </a>
-                      <a href="https://docs.plasmnet.io/" target="_blank" rel="noopener noreferrer"
-                        class="btn btn-outline-gradiant btn-lg">
-                        Docs
-                        <svg class="icon">
-                          <use xlink:href="#icon-arrow-top-right"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </div><!-- .support-info -->
-                  <div class="support-status text-center text-lg-left">
-                    <div class="support-status__item">
-                      <div class="support-status__number">150K<span class="plus">+</span><span class="eth">ETH</span>
-                      </div>
-                      <div class="support-status__label">TVL Through Lockdrops</div>
-                    </div>
-                    <div class="d-sm-flex d-lg-block justify-content-center">
-                      <div class="support-status__item mr-sm-5 mr-lg-0">
-                        <div class="support-status__number">10K<span class="plus">+</span></div>
-                        <div class="support-status__label"></div>Community Members
-                      </div>
-                    </div>
-                    <div class="support-status__item">
-                      <div class="support-status__number">40<span class="plus">+</span></div>
-                      <div class="support-status__label">Ecosystem Projects</div>
-                    </div>
-                  </div>
-                </div>
-              </div><!-- .container -->
-              </div><!-- #support -->
-
-              <div id="multi-chain">
-                <div class="container">
-                  <h2>The Heart of <br>the Multi Chain Future
-                  </h2>
-                  <div class="multi-chain__inner">
-                    <p class="pt-4">Astar Network is a gateway to the multi chain future. We connect multiple layer1
-                      blockchains to
-                      Polkadot through Astar Network.</p>
-                    <div class="multi-chain__image pt-md-5 pt-lg-0 text-right">
-                      <img src="images/multi-chain-image.jpg" alt="The Heart of the Multi Chain Future" loading="lazy">
-                    </div>
-                  </div>
-                </div><!-- .container -->
-              </div><!-- #multi-chain -->
-
-              <div id="key-feature">
-                <div class="container">
-                  <div class="dapps-staking mb-4 mb-sm-0">
-                    <div class="key-feature-image text-center"><img src="images/dapps-staking-image.png"
-                        alt="dApps Staking" loading="lazy"></div>
-                    <div class="p-4">
-                      <h3>dApps Staking</h3>
-                      <p>Earn ASTA token by making smart contracts.</p>
-                    </div>
-                  </div>
-                  <div
-                    class="multi-virtul-machine d-sm-flex align-items-center mb-4 mb-sm-0 py-4 px-4 py-sm-4 px-sm-0 py-lg-0 px-lg-0">
-                    <div class="key-feature-image text-center text-sm-left mb-3 mb-sm-0"><img
-                        src="images/multi-virtul-machine-image.png" alt="Multi Virtual Machine" loading="lazy"></div>
-                    <div class="key-feature-text">
-                      <h3>Multi Virtual Machine</h3>
-                      <p class="mb-0">Astar natively supports Ethereum Virtual Machine and WebAssembly.</p>
-                    </div>
-                  </div>
-                  <div class="layer2 d-sm-flex align-items-center p-4 p-sm-0">
-                    <div class="key-feature-image text-center text-sm-left mb-3 mb-sm-0"><img
-                        src="images/layer2-image.png" alt="Layer2" loading="lazy"></div>
-                    <div class="key-feature-text">
-                      <h3>Layer2</h3>
-                      <p class="mb-0">Supporting rollups.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div id="potal" class="lazy">
-                <div class="container">
-                  <h2 class="text-center mb-3 mb-sm-5"><span>Astar Network Portal</span></h2>
-                  <div class="d-lg-flex align-items-center justify-content-center">
-                    <nav class="mr-lg-5">
-                      <ul class="d-flex d-lg-block justify-content-center">
-                        <li>
-                          <a href="javascript:rudrSwitchTab('tb_1', 'content_1');" class="tabmenu active" id="tb_1">
-                            <svg class="icon">
-                              <use xlink:href="#icon-balance"></use>
-                            </svg>
-                            <span class="d-none d-sm-inline">Balance</span>
-                          </a>
+              <div class="nav-mobile">
+                <div class="nav-mobile__inner d-flex align-items-center justify-content-center">
+                  <ul>
+                    <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a>
+                    </li>
+                    <li class="nav-item"><a href="#" target="_blank" rel="noopener noreferrer"
+                        class="nav-link">Forum</a>
+                    </li>
+                    <li class="nav-item">
+                      <p class="nav-link m-0">Community</p>
+                      <ul class="ms-3 mb-4 community">
+                        <li class="nav-item"><a href="https://twitter.com/AstarNetwork" target="_blank"
+                            rel="noopener noreferrer" class="nav-link">Twitter</a></li>
+                        <li class="nav-item"><a href="https://discord.gg/Z3nC9U4" target="_blank"
+                            rel="noopener noreferrer" class="nav-link">Discord</a>
                         </li>
-                        <li>
-                          <a href="javascript:rudrSwitchTab('tb_2', 'content_2');" class="tabmenu" id="tb_2">
-                            <svg class="icon">
-                              <use xlink:href="#icon-dapps-staking"></use>
-                            </svg>
-                            <span class="d-none d-sm-inline">dApps
-                              Staking</span>
-                          </a>
+                        <li class="nav-item"><a href="https://t.me/PlasmOfficial" target="_blank"
+                            rel="noopener noreferrer" class="nav-link">Telegram</a></li>
+                        <li class="nav-item"><a href="https://medium.com/plasm-network" target="_blank"
+                            rel="noopener noreferrer" class="nav-link">Medium</a>
                         </li>
-                        <li>
-                          <a href="javascript:rudrSwitchTab('tb_3', 'content_3');" class="tabmenu" id="tb_3">
-                            <svg class="icon">
-                              <use xlink:href="#icon-staking-validators"></use>
-                            </svg>
-                            <span class="d-none d-sm-inline">Staking</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="javascript:rudrSwitchTab('tb_4', 'content_4');" class="tabmenu" id="tb_4">
-                            <svg class="icon">
-                              <use xlink:href="#icon-history"></use>
-                            </svg>
-                            <span class="d-none d-sm-inline">History</span>
-                          </a>
+                        <li class="nav-item"><a href="https://github.com/PlasmNetwork/plasmdocs/blob/master/wp/en.pdf"
+                            target="_blank" rel="noopener noreferrer" class="nav-link">Whitepaper</a>
                         </li>
                       </ul>
-                    </nav>
-                    <div class="portal-capture">
-                      <div id="content_1" class="tabcontent">
-                        <img src="images/portal-balance.jpg" alt="Balance" loading="lazy">
-                      </div>
-                      <div id="content_2" class="tabcontent" style="display:none;">
-                        <img src="images/portal-dapps-staking.jpg" alt="dApps Staking" loading="lazy">
-                      </div>
-                      <div id="content_3" class="tabcontent" style="display:none;">
-                        <img src="images/portal-staking-validators.jpg" alt="Staking" loading="lazy">
-                      </div>
-                      <div id="content_4" class="tabcontent" style="display:none;">
-                        <img src="images/portal-history.jpg" alt="History" loading="lazy">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="text-center mt-5">
-                    <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.dusty.plasmnet.io%2F#/explorer"
-                      target="_blank" rel="noopener noreferrer" class="btn btn-gradiant btn-lg">
-                      Use App
-                      <svg class="icon">
-                        <use xlink:href="#icon-arrow-top-right"></use>
-                      </svg>
+                    </li>
+                  </ul>
+                </div>
+              </div><!-- .nav-mobile -->
+
+              <section id="hero" class="d-flex align-items-center">
+                <div class="container">
+                  <div class="hero-inner ps-lg-4 text-center text-lg-start">
+                    <p class="mb-2">Support the <ruby>Astar Network<rt>(Previously Plasm Network)</rt></ruby>
+                      Parachain Auction</p>
+                    <h1 class="mb-4 mb-sm-5">Stake DOT <small>&</small> <br>Get ASTA Today!</h1>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-gradiant btn-lg">
+                      Stake DOT Now
                     </a>
                   </div>
                 </div>
-              </div><!-- #potal -->
+              </section>
 
-              <div id="token">
-                <div class="token-inner d-flex align-items-center lazy">
-                  <div class="container">
-                    <h2 class="text-center mb-5"><span>ASTA Token</span></h2>
-                    <div class="token-list">
+              <section id="remaining-time">
+                <div class="container text-center">
+                  <h2><span>Remaining Time</span></h2>
+                  <p class="fw-bold text-danger">Highest Bonus Period Ends:</p>
+                  <div class="d-flex justify-content-center flex-wrap">
 
-                      <div class="token-item">
-                        <div class="token-item__inner px-4 py-5">
-                          <div class="token-image text-center mb-4"><img src="images/icon-transaction.svg"
-                              alt="Transaction" loading="lazy"></div>
-                          <h3 class="mb-3">Transaction</h3>
-                          <p>Every on-chain transaction takes fees.</p>
-                        </div>
+                    <div class="remaining-time__item d-flex justify-content-center align-items-center m-2">
+                      <div class="remaining-time__circle">
+                        <svg viewBox="0 0 36 36">
+                          <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                              <stop offset="0%" stop-color="#25BED2" />
+                              <stop offset="20%" stop-color="#2686E9" />
+                              <stop offset="90%" stop-color="#8B5BC5" />
+                              <stop offset="100%" stop-color="#FF92CC" />
+                            </linearGradient>
+                          </defs>
+                          <path stroke="#333A50" fill="none" strokeWidth="6" d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831" />
+                          <path stroke="url(#gradient)" stroke-dasharray="75, 100" fill="none" strokeWidth="6" d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        </svg>
                       </div>
+                      <dl class="d-flex flex-column lh-sm m-0">
+                        <dt class="text-uppercase order-2 fw-normal">Days</dt>
+                        <dd class="order-1 text-white m-0 fw-bolder">13</dd>
+                      </dl>
+                    </div>
 
-                      <div class="token-item">
-                        <div class="token-item__inner px-4 py-5">
-                          <div class="token-image text-center mb-4"><img src="images/icon-governance.svg"
-                              alt="On-Chain Governance" loading="lazy"></div>
-                          <h3 class="mb-3">On-Chain Governance</h3>
-                          <p>ASTA token is used for facilitating the governance activities such as voting and referenda.
-                          </p>
-                        </div>
+                    <div class="remaining-time__item d-flex justify-content-center align-items-center m-2">
+                      <div class="remaining-time__circle">
+                        <svg viewBox="0 0 36 36">
+                          <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                              <stop offset="0%" stop-color="#25BED2" />
+                              <stop offset="20%" stop-color="#2686E9" />
+                              <stop offset="90%" stop-color="#8B5BC5" />
+                              <stop offset="100%" stop-color="#FF92CC" />
+                            </linearGradient>
+                          </defs>
+                          <path stroke="#333A50" fill="none" strokeWidth="6" d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831" />
+                          <path stroke="url(#gradient)" stroke-dasharray="8.33, 100" fill="none" strokeWidth="6" d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        </svg>
                       </div>
+                      <dl class="d-flex flex-column lh-sm m-0">
+                        <dt class="text-uppercase order-2 fw-normal">Hours</dt>
+                        <dd class="order-1 text-white m-0 fw-bolder">05</dd>
+                      </dl>
+                    </div>
 
-                      <div class="token-item">
-                        <div class="token-item__inner px-4 py-5">
-                          <div class="token-image text-center mb-4"><img src="images/icon-staking.svg" alt="Staking"
-                              loading="lazy">
+                    <div class="remaining-time__item d-flex justify-content-center align-items-center m-2">
+                      <div class="remaining-time__circle">
+                        <svg viewBox="0 0 36 36">
+                          <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                              <stop offset="0%" stop-color="#25BED2" />
+                              <stop offset="20%" stop-color="#2686E9" />
+                              <stop offset="90%" stop-color="#8B5BC5" />
+                              <stop offset="100%" stop-color="#FF92CC" />
+                            </linearGradient>
+                          </defs>
+                          <path stroke="#333A50" fill="none" strokeWidth="6" d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831" />
+                          <path stroke="url(#gradient)" stroke-dasharray="46.66, 100" fill="none" strokeWidth="6" d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        </svg>
+                      </div>
+                      <dl class="d-flex flex-column lh-sm m-0">
+                        <dt class="text-uppercase order-2 fw-normal">Minutes</dt>
+                        <dd class="order-1 text-white m-0 fw-bolder">28</dd>
+                      </dl>
+                    </div>
+
+                    <div class="remaining-time__item d-flex justify-content-center align-items-center m-2">
+                      <div class="remaining-time__circle">
+                        <svg viewBox="0 0 36 36">
+                          <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                              <stop offset="0%" stop-color="#25BED2" />
+                              <stop offset="20%" stop-color="#2686E9" />
+                              <stop offset="90%" stop-color="#8B5BC5" />
+                              <stop offset="100%" stop-color="#FF92CC" />
+                            </linearGradient>
+                          </defs>
+                          <path stroke="#333A50" fill="none" strokeWidth="6" d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831" />
+                          <path stroke="url(#gradient)" stroke-dasharray="90, 100" fill="none" strokeWidth="6" d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        </svg>
+                      </div>
+                      <dl class="d-flex flex-column lh-sm m-0">
+                        <dt class="text-uppercase order-2 fw-normal">Seconds</dt>
+                        <dd class="order-1 text-white m-0 fw-bolder">54</dd>
+                      </dl>
+                    </div>
+
+                  </div>
+                </div>
+              </section>
+
+              <section id="stake-dot">
+                <div class="stake-dot__bg-left">
+                  <div class="stake-dot__bg-right">
+                    <div class="container-md">
+                      <h2 class="text-center mb-3 mb-sm-5"><span>Stake DOT</span></h2>
+                      <p class="text-center mb-5">
+                        <svg class="icon">
+                          <use xlink:href="#icon-information-circle"></use>
+                        </svg>
+                        Note: Proxy accounts and multi signatures are not able to receive rewards
+                      </p>
+                      <div class="stake-dot__form py-5 px-4 p-sm-5">
+                        <form>
+                          <div class="mb-4 form-group">
+                            <label class="form-label" for="PolkadotAddress">Polkadot Address <strong
+                                class="text-danger">*</strong></label>
+                            <input type="text" class="form-control form-control-lg" id="PolkadotAddress">
                           </div>
-                          <h3 class="mb-3">Staking</h3>
-                          <p>ASTA token holders can stake ASTA tokens on dApps as well as network. By doing so, the
-                            staker
-                            can earn ASTA tokens</p>
-                        </div>
-                      </div>
-
-                      <div class="token-item">
-                        <div class="token-item__inner px-4 py-5">
-                          <div class="token-image text-center mb-4"><img src="images/icon-layer2.svg" alt="Layer2"
-                              loading="lazy">
+                          <div class="mb-4 form-group">
+                            <label class="form-label" for="AvailableAmount">Available Amount <strong
+                                class="text-danger">*</strong></label>
+                            <input type="text" class="form-control form-control-lg" readonly placeholder="0" value="0"
+                              for="AvailableAmount">
+                            <span>DOT</span>
                           </div>
-                          <h3 class="mb-3">Layer2</h3>
-                          <p>Layer2 application developers make a deposit on their layer1 smart contract and create
-                            layer2 applications.</p>
-                        </div>
+                          <div class="mb-4 form-group">
+                            <label class="form-label" for="StakingAmount">Staking Amount <strong
+                                class="text-danger">*</strong></label>
+                            <input type="text" class="form-control form-control-lg" placeholder="0" id="StakingAmount">
+                            <span>DOT</span>
+                          </div>
+                          <div class="mb-4 form-group">
+                            <label class="form-label" for="ReferralAddress">Referral Address (optional)</label>
+                            <input type="text" class="form-control form-control-lg" id="ReferralAddress">
+                          </div>
+                          <div class="mb-4 form-group">
+                            <label class="form-label" for="EstimatedAmount">Estimated Amount <strong
+                                class="text-danger">*</strong></label>
+                            <input type="text" class="form-control form-control-lg" readonly placeholder="0" value="0"
+                              id="EstimatedAmount">
+                            <span>ASTA</span>
+                          </div>
+                          <div class="mb-4 form-group">
+                            <label class="form-label" for="EmailAddress">Email Address (optional)</label>
+                            <input type="email" class="form-control form-control-lg" placeholder="youremail@example.com"
+                              id="EmailAddress">
+                          </div>
+                          <div class="text-center">
+                            <button type="button" class="btn btn-lg btn-gradiant">
+                              Stake Now
+                            </button>
+                          </div>
+                        </form>
                       </div>
-
                     </div>
                   </div>
                 </div>
-              </div>
+              </section>
 
-              <section id="press">
+              <div id="status">
                 <div class="container">
-                  <h2 class="text-center mb-5">In the Press</h2>
-                  <ul class="logo-list">
-                    <li>
-                      <a href="https://www.chainnews.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="images/logo-chainnews.png" alt="链闻 ChainNews - 区块链新闻快讯资讯信息服务平台" loading="lazy">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://cointelegraph.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="images/logo-cointelegraph.png" alt="Cointelegraph Bitcoin & Ethereum Blockchain News"
-                          loading="lazy">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.forbes.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="images/logo-forbes.png" alt="Forbes" loading="lazy">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://techcrunch.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="images/logo-techcrunch.png" alt="TechCrunch – Startup and Technology News"
-                          loading="lazy">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.theblockcrypto.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="images/logo-the-block.png"
-                          alt="The Block - The first and final word in digital assets" loading="lazy">
-                      </a>
-                    </li>
-                  </ul>
+                  <div class="d-sm-flex justify-content-center">
+                    <dl class="d-flex flex-column text-center my-3 mx-4">
+                      <dt class="order-2 fw-normal">Participants</dt>
+                      <dd class="order-1 fw-bold m-0">14,164</dd>
+                    </dl>
+                    <dl class="d-flex flex-column text-center my-3 mx-4">
+                      <dt class="order-2 fw-normal">DOT Contributed</dt>
+                      <dd class="order-1 fw-bold m-0">501,137.7</dd>
+                    </dl>
+                    <dl class="d-flex flex-column text-center my-3 mx-4">
+                      <dt class="order-2 fw-normal">ASTA to be Distributed</dt>
+                      <dd class="order-1 fw-bold m-0">6,845,464.7</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div><!-- #status -->
+
+              <section id="why-how">
+                <div class="container">
+                  <h2 class="text-center mb-3 mb-sm-5"><span>Why host a Crowdloan and <br>how does it work?</span></h2>
+                  <div class="why-how__grid pt-4">
+                    <div>
+                      <h3 class="fw-bold">Parachain Auctiont</h3>
+                      <p>Kusama is a sharded, multi-chain network that allows blockchains to connect for
+                        interoperability, scalability, and plug-and-play network security. Kusama is the cousin network
+                        of Polkadot. To join Kusama’s network, all parachains must participate in and win a
+                        unpermissioned candle auction to secure a slot on the network. Parachains can choose to raise
+                        KSM in a variety of ways in order to participate in the auction.</p>
+                    </div>
+                    <div>
+                      <h3 class="fw-bold">Astar’s Crowdloan</h3>
+                      <p>Karura has chosen to host a Crowdloan to trustlessly crowdsource KSM, which will be used to
+                        participate in the Kusama parachain auction. These KSM will be bonded, or ‘locked’, in the
+                        Kusama Relay Chain for the duration of Karura’s parachain lease.</p>
+                    </div>
+                    <div>
+                      <h3 class="fw-bold">Astar (ASTA) Distribution</h3>
+                      <p>In the event Karura succeeds in its auction bid and secures a Kusama parachain lease, and
+                        network genesis of Karura occurs on Kusama, Karura will gift KAR to Karura supporters’. Kusama
+                        supporters will be distributed KAR in the same account they used to bond KSM in support of
+                        Karura’s parachain lease. The amount of KAR distributed is dependant on the level of support
+                        provided.</p>
+                    </div>
+                    <div>
+                      <h3 class="fw-bold">Astar & Shiden - Sister Networks</h3>
+                      <p>Acala will operate its DeFi parachains on Polkadot and Kusama to serve both communities. Acala
+                        and Karura will operate in parallel, and will eventually be interoperable once Polkadot and
+                        Kusama are bridged.</p>
+                    </div>
+                  </div>
                 </div>
               </section>
 
-              <section id="backers">
-                <div class="container">
-                  <h2 class="text-center mb-5">Backers</h2>
-                  <ul class="logo-list">
-                    <li>
-                      <a href="https://labs.binance.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="images/logo-binance.png" alt="Binance Labs" loading="lazy">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://hypersphere.ventures/" target="_blank" rel="noopener noreferrer">
-                        <img src="images/logo-hypersphere.png" alt="Hypersphere Ventures" loading="lazy">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.fenbushi.vc/" target="_blank" rel="noopener noreferrer">
-                        <img src="images/logo-fenbushi.png" alt="Fenbushi Capital" loading="lazy">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.hashkeycap.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="images/logo-hashkey.png" alt="Hashkey Capital" loading="lazy">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.dfg.group/investment" target="_blank" rel="noopener noreferrer">
-                        <img src="images/logo-dfg.png" alt="DFG" loading="lazy">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.longhashventures.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="images/logo-longhash.png" alt="LongHash Ventures" loading="lazy">
-                      </a>
-                    </li>
-                    <li>
-                      <img src="images/logo-blockdreamfund.png" alt="Block Dream Fund" loading="lazy">
-                    </li>
-                    <li>
-                      <a href="https://www.gumi-cryptos.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="images/logo-gumicryptos.png" alt="gumi Cryptos" loading="lazy">
-                      </a>
-                    </li>
-                    <!-- <li>
-                      <a href="https://www.polkaworld.org/" target="_blank" rel="noopener noreferrer">
-                        <img src="images/logo-polkaworld.png" alt="PolkaWorld" loading="lazy">
-                      </a>
-                    </li> -->
-                    <li>
-                      <img src="images/logo-sub0capital.png" alt="Sub0 Capital" loading="lazy">
-                    </li>
-                    <li>
-                      <img src="images/logo-digitalstrategies.png" alt="Digital Strategies" loading="lazy">
-                    </li>
-                    <li>
-                      <a href="https://www.altonomy.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="images/logo-altonomy.png" alt="Altonomy" loading="lazy">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://au21.capital/" target="_blank" rel="noopener noreferrer">
-                        <img src="images/logo-au21capital.png" alt="AU21 Capital" loading="lazy">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://trgc.io/" target="_blank" rel="noopener noreferrer">
-                        <img src="images/logo-trgcapital.png" alt="TRG Capital" loading="lazy">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://snzholding.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="images/logo-snz.png" alt="SNZ" loading="lazy">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://iosg.vc/" target="_blank" rel="noopener noreferrer">
-                        <img src="images/logo-iosgventres.png" alt="IOSG Ventures" loading="lazy">
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </section>
-
-              <section id="supporters">
-                <div class="container">
-                  <h2 class="text-center mb-5">Supporters</h2>
-                  <ul class="logo-list">
-                    <li>
-                      <a href="https://startups.microsoft.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="images/logo-microsoft.png" alt="Microsoft for Startups" loading="lazy">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.substrate.io/builders-program/" target="_blank" rel="noopener noreferrer">
-                        <img src="images/logo-substrate.png" alt="Substrate Builders Program" loading="lazy">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://web3.foundation/grants/" target="_blank" rel="noopener noreferrer">
-                        <img src="images/logo-web3.png" alt="Web3 Foundation Grants Program" loading="lazy">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.xcelerator.berkeley.edu/" target="_blank" rel="noopener noreferrer">
-                        <img src="images/logo-xcelerator.png" alt="The Berkeley Blockchain Xcelerator" loading="lazy">
-                      </a>
-                    </li>
-                  </ul>
+              <section id="faq">
+                <div class="container-md">
+                  <h2 class="text-center mb-3 mb-sm-5"><span>FAQ</span></h2>
+                  <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Accordion Item #1
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the first item's accordion body.</strong> It is shown by default, until the
+                          collapse plugin adds the appropriate classes that we use to style each element. These classes
+                          control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                          modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                          that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                          does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Accordion Item #2
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
+                          collapse plugin adds the appropriate classes that we use to style each element. These classes
+                          control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                          modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                          that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                          does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Accordion Item #3
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                          collapse plugin adds the appropriate classes that we use to style each element. These classes
+                          control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                          modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                          that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                          does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </section>
 
@@ -546,38 +454,19 @@
                 <div class="footer-inner">
                   <div class="container pt-5 pb-3">
 
-                    <nav class="d-lg-flex justify-content-between mb-4">
-                      <ul class="d-flex flex-wrap footer-nav">
-                        <li class="pr-md-4 pr-lg-5 mb-5 footer-nav__item">
-                          <p class="font-weight-bold">General</p>
-                          <ul>
-                            <li><a href="https://stake.co.jp/en/" target="_blank" rel="noopener noreferrer">About</a>
-                            </li>
-                            <li><a href="https://stake.co.jp/en/contact" target="_blank"
-                                rel="noopener noreferrer">Contact Us</a></li>
-                            <li><a href="https://stake.co.jp/en/career" target="_blank"
-                                rel="noopener noreferrer">Careers</a></li>
-                          </ul>
+                    <nav class="d-sm-flex justify-content-between mb-4">
+                      <ul class="d-sm-flex flex-wrap footer-nav">
+                        <li class="pe-md-4 pe-lg-5 mb-3 mb-sm-5 footer-nav__item">
+                          <p class="fw-bolder"><a href="#faq">FAQ</a></p>
                         </li>
-                        <li class="pr-md-4 pr-lg-5 mb-5 footer-nav__item">
-                          <p class="font-weight-bold">Repositories</p>
-                          <ul>
-                            <li><a href="https://github.com/PlasmNetwork/Plasm" target="_blank"
-                                rel="noopener noreferrer">Astar</a></li>
-                            <li><a href="https://github.com/staketechnologies/apps" target="_blank"
-                                rel="noopener noreferrer">Astar Portal Sites</a></li>
-                            <li><a href="https://github.com/PlasmNetwork/lockdrop-ui" target="_blank"
-                                rel="noopener noreferrer">Astar Lockdrop</a></li>
-                            <li><a href="https://plasmnet.io/" target="_blank" rel="noopener noreferrer">Astar
-                                Documentation</a></li>
-                            <li><a href="https://github.com/PlasmNetwork/plasmnet.io" target="_blank"
-                                rel="noopener noreferrer">Astar Homepage</a></li>
-                          </ul>
+                        <li class="pe-md-4 pe-lg-5 mb-3 mb-sm-5 footer-nav__item">
+                          <p class="fw-bolder"><a href="#" target="_blank" rel="noopener noreferrer">Forum</a>
+                          </p>
                         </li>
-                        <li class="pr-md-4 pr-lg-5 mb-5 footer-nav__item">
-                          <p class="font-weight-bold">Community</p>
+                        <li class="mb-3 mb-sm-5 footer-nav__item">
+                          <p class="fw-bolder mb-1 mb-sm-3">Community</p>
                           <ul>
-                            <li><a href="https://twitter.com/Plasm_Network" target="_blank"
+                            <li><a href="https://twitter.com/AstarNetwork" target="_blank"
                                 rel="noopener noreferrer">Twitter</a></li>
                             <li><a href="https://discord.gg/Z3nC9U4" target="_blank"
                                 rel="noopener noreferrer">Discord</a></li>
@@ -589,19 +478,10 @@
                                 target="_blank" rel="noopener noreferrer">Whitepaper</a></li>
                           </ul>
                         </li>
-                        <li class="pr-md-4 pr-lg-5 mb-5 footer-nav__item">
-                          <p class="font-weight-bold">Collaboration</p>
-                          <ul>
-                            <li><a href="https://www.substrate.io/builders-program/" target="_blank"
-                                rel="noopener noreferrer">Substrate Builders Program</a></li>
-                            <li><a href="https://web3.foundation/grants/" target="_blank" rel="noopener noreferrer">Web3
-                                foundation Grants Program</a></li>
-                          </ul>
-                        </li>
                       </ul>
                       <ul class="d-flex social-nav mb-5">
                         <li>
-                          <a href="https://twitter.com/Plasm_Network" target="_blank" rel="noopener noreferrer">
+                          <a href="https://twitter.com/AstarNetwork" target="_blank" rel="noopener noreferrer">
                             <svg class="icon">
                               <use xlink:href="#icon-twitter"></use>
                             </svg>
@@ -644,7 +524,7 @@
                     </nav>
 
                     <p class="copyright">
-                      <img src="images/brand-logo-mark.png" alt="Astar Network" class="brand-logo__mark mr-2"
+                      <img src="images/brand-logo-mark.png" alt="Astar Network" class="brand-logo__mark me-2"
                         loading="lazy">
                       © 2021 Astar Network. All Rights Reserved.
                     </p>
@@ -658,95 +538,18 @@
                 hamburgerBtn.onclick = function () {
                   document.querySelector('body').classList.toggle("is-open");
                 }
-              </script>
 
-              <script>
-                // Image fade effect
-                window.addEventListener('scroll', function () {
-                  var fadeElements = document.querySelectorAll('.effect-fade');
-                  fadeElements.forEach(function (elem) {
-                    var elemPos = elem.offsetTop;
-                    var scroll = window.pageYOffset;
-                    var windowHeight = window.innerHeight;
-                    if (scroll > elemPos - windowHeight / 1.5) {
-                      elem.classList.add('effect-scroll');
-                    }
-                  });
+                // Web Fonts lazy loading
+                var webfonts = document.querySelectorAll(".webfont");
+                webfonts.forEach(function (webfont) {
+                  webfont.rel = "stylesheet";
                 });
               </script>
 
-              <script>
-                // Astar portal
-                function rudrSwitchTab(rudr_tab_id, rudr_tab_content) {
-                  var x = document.getElementsByClassName("tabcontent");
-                  var i;
-                  for (i = 0; i < x.length; i++) {
-                    x[i].style.display = 'none';
-                  }
-                  document.getElementById(rudr_tab_content).style.display = 'block';
-
-                  var x = document.getElementsByClassName("tabmenu");
-                  var i;
-                  for (i = 0; i < x.length; i++) {
-                    x[i].className = 'tabmenu';
-                  }
-                  document.getElementById(rudr_tab_id).className = 'tabmenu active';
-                }
-              </script>
-
-              <script>
-                // lazyload
-                document.addEventListener("DOMContentLoaded", function () {
-                  var lazyloadImages;
-
-                  if ("IntersectionObserver" in window) {
-                    lazyloadImages = document.querySelectorAll(".lazy");
-                    var imageObserver = new IntersectionObserver(function (entries, observer) {
-                      entries.forEach(function (entry) {
-                        if (entry.isIntersecting) {
-                          var image = entry.target;
-                          image.classList.remove("lazy");
-                          imageObserver.unobserve(image);
-                        }
-                      });
-                    });
-
-                    lazyloadImages.forEach(function (image) {
-                      imageObserver.observe(image);
-                    });
-                  } else {
-                    var lazyloadThrottleTimeout;
-                    lazyloadImages = document.querySelectorAll(".lazy");
-
-                    function lazyload() {
-                      if (lazyloadThrottleTimeout) {
-                        clearTimeout(lazyloadThrottleTimeout);
-                      }
-
-                      lazyloadThrottleTimeout = setTimeout(function () {
-                        var scrollTop = window.pageYOffset;
-                        lazyloadImages.forEach(function (img) {
-                          if (img.offsetTop < (window.innerHeight + scrollTop)) {
-                            img.src = img.dataset.src;
-                            img.classList.remove('lazy');
-                          }
-                        });
-                        if (lazyloadImages.length == 0) {
-                          document.removeEventListener("scroll", lazyload);
-                          window.removeEventListener("resize", lazyload);
-                          window.removeEventListener("orientationChange", lazyload);
-                        }
-                      }, 20);
-                    }
-
-                    document.addEventListener("scroll", lazyload);
-                    window.addEventListener("resize", lazyload);
-                    window.addEventListener("orientationChange", lazyload);
-                  }
-                })
-              </script>
-
               <script src="js/modernizr-webp.js"></script>
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+                integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+                crossorigin="anonymous"></script>
           </body>
 
 </html>
