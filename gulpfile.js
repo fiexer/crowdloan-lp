@@ -35,7 +35,10 @@ const image = () =>
     .pipe(
       imagemin([
         imageminPng(),
-        imageminJpg(),
+        imageminJpg({
+          accurate:true,
+          quality:'veryhigh',
+        }),
         imageminGif({
           interlaced: false,
           optimizationLevel: 3,
