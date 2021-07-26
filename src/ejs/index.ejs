@@ -163,7 +163,7 @@
                   <p class="fw-bold text-danger">Highest Bonus Period Ends:</p>
                   <div class="d-flex justify-content-center flex-wrap">
 
-                    <div class="remaining-time__item d-flex justify-content-center align-items-center m-2">
+                    <div id="days" class="remaining-time__item d-flex justify-content-center align-items-center m-2">
                       <div class="remaining-time__circle">
                         <svg viewBox="0 0 36 36">
                           <defs>
@@ -177,18 +177,19 @@
                           <path stroke="#333A50" fill="none" strokeWidth="6" d="M18 2.0845
                             a 15.9155 15.9155 0 0 1 0 31.831
                             a 15.9155 15.9155 0 0 1 0 -31.831" />
-                          <path stroke="url(#gradient)" stroke-dasharray="75, 100" fill="none" strokeWidth="6" d="M18 2.0845
+                          <path class="linear-gradient" stroke="url(#gradient)" stroke-dasharray="0, 100" fill="none"
+                            strokeWidth="6" d="M18 2.0845
                             a 15.9155 15.9155 0 0 1 0 31.831
                             a 15.9155 15.9155 0 0 1 0 -31.831" />
                         </svg>
                       </div>
                       <dl class="d-flex flex-column lh-sm m-0">
                         <dt class="text-uppercase order-2 fw-normal">Days</dt>
-                        <dd class="order-1 text-white m-0 fw-bolder">13</dd>
+                        <dd class="order-1 text-white m-0 fw-bolder">0</dd>
                       </dl>
                     </div>
 
-                    <div class="remaining-time__item d-flex justify-content-center align-items-center m-2">
+                    <div id="hours" class="remaining-time__item d-flex justify-content-center align-items-center m-2">
                       <div class="remaining-time__circle">
                         <svg viewBox="0 0 36 36">
                           <defs>
@@ -202,18 +203,19 @@
                           <path stroke="#333A50" fill="none" strokeWidth="6" d="M18 2.0845
                             a 15.9155 15.9155 0 0 1 0 31.831
                             a 15.9155 15.9155 0 0 1 0 -31.831" />
-                          <path stroke="url(#gradient)" stroke-dasharray="8.33, 100" fill="none" strokeWidth="6" d="M18 2.0845
+                          <path class="linear-gradient" stroke="url(#gradient)" stroke-dasharray="0, 100" fill="none"
+                            strokeWidth="6" d="M18 2.0845
                             a 15.9155 15.9155 0 0 1 0 31.831
                             a 15.9155 15.9155 0 0 1 0 -31.831" />
                         </svg>
                       </div>
                       <dl class="d-flex flex-column lh-sm m-0">
                         <dt class="text-uppercase order-2 fw-normal">Hours</dt>
-                        <dd class="order-1 text-white m-0 fw-bolder">05</dd>
+                        <dd class="order-1 text-white m-0 fw-bolder">0</dd>
                       </dl>
                     </div>
 
-                    <div class="remaining-time__item d-flex justify-content-center align-items-center m-2">
+                    <div id="minutes" class="remaining-time__item d-flex justify-content-center align-items-center m-2">
                       <div class="remaining-time__circle">
                         <svg viewBox="0 0 36 36">
                           <defs>
@@ -227,18 +229,19 @@
                           <path stroke="#333A50" fill="none" strokeWidth="6" d="M18 2.0845
                             a 15.9155 15.9155 0 0 1 0 31.831
                             a 15.9155 15.9155 0 0 1 0 -31.831" />
-                          <path stroke="url(#gradient)" stroke-dasharray="46.66, 100" fill="none" strokeWidth="6" d="M18 2.0845
+                          <path class="linear-gradient" stroke="url(#gradient)" stroke-dasharray="0, 100" fill="none"
+                            strokeWidth="6" d="M18 2.0845
                             a 15.9155 15.9155 0 0 1 0 31.831
                             a 15.9155 15.9155 0 0 1 0 -31.831" />
                         </svg>
                       </div>
                       <dl class="d-flex flex-column lh-sm m-0">
                         <dt class="text-uppercase order-2 fw-normal">Minutes</dt>
-                        <dd class="order-1 text-white m-0 fw-bolder">28</dd>
+                        <dd class="order-1 text-white m-0 fw-bolder">0</dd>
                       </dl>
                     </div>
 
-                    <div class="remaining-time__item d-flex justify-content-center align-items-center m-2">
+                    <div id="seconds" class="remaining-time__item d-flex justify-content-center align-items-center m-2">
                       <div class="remaining-time__circle">
                         <svg viewBox="0 0 36 36">
                           <defs>
@@ -252,20 +255,64 @@
                           <path stroke="#333A50" fill="none" strokeWidth="6" d="M18 2.0845
                             a 15.9155 15.9155 0 0 1 0 31.831
                             a 15.9155 15.9155 0 0 1 0 -31.831" />
-                          <path stroke="url(#gradient)" stroke-dasharray="90, 100" fill="none" strokeWidth="6" d="M18 2.0845
+                          <path class="linear-gradient" stroke="url(#gradient)" stroke-dasharray="0, 100" fill="none"
+                            strokeWidth="6" d="M18 2.0845
                             a 15.9155 15.9155 0 0 1 0 31.831
                             a 15.9155 15.9155 0 0 1 0 -31.831" />
                         </svg>
                       </div>
                       <dl class="d-flex flex-column lh-sm m-0">
                         <dt class="text-uppercase order-2 fw-normal">Seconds</dt>
-                        <dd class="order-1 text-white m-0 fw-bolder">54</dd>
+                        <dd class="order-1 text-white m-0 fw-bolder">0</dd>
                       </dl>
                     </div>
 
                   </div>
                 </div>
               </section>
+
+              <script>
+                // Set the date we're counting down to
+                const countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+
+                // Update the count down every 1 second
+                const x = setInterval(function () {
+
+                  // Get today's date and time
+                  const now = new Date().getTime();
+
+                  // Find the distance between now and the count down date
+                  const distance = countDownDate - now;
+
+                  // Time calculations for days, hours, minutes and seconds
+                  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                  // DDisplay the result in the element
+                  const displayTime = (d, h, m, s) => {
+                    document.querySelector("#days dd").innerHTML = d;
+                    document.querySelector("#hours dd").innerHTML = h;
+                    document.querySelector("#minutes dd").innerHTML = m;
+                    document.querySelector("#seconds dd").innerHTML = s;
+
+                    const maxDays = 200; // Please set max days
+                    document.querySelector("#days .linear-gradient").setAttribute("stroke-dasharray", `${(d * 100) / maxDays}, 100`);
+                    document.querySelector("#hours .linear-gradient").setAttribute("stroke-dasharray", `${(h * 100) / 60}, 100`);
+                    document.querySelector("#minutes .linear-gradient").setAttribute("stroke-dasharray", `${(m * 100) / 60}, 100`);
+                    document.querySelector("#seconds .linear-gradient").setAttribute("stroke-dasharray", `${(s * 100) / 60}, 100`);
+                  }
+
+                  displayTime(days, hours, minutes, seconds);
+
+                  // If the count down is finished
+                  if (distance < 0) {
+                    clearInterval(x);
+                    displayTime(0, 0, 0, 0);
+                  }
+                }, 1000);
+              </script>
 
               <section id="stake-dot">
                 <div class="stake-dot__bg-left">
